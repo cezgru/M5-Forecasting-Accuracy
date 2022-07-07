@@ -46,14 +46,13 @@ def create_predictions(directory):
     
     return lgb_reg.predict(X)
 
-    if __name__ == "__main__":
-        print('This script doesnt make too much sense. The entire premise is to deploy a very specific competition submission.')
-        print('Nevertheless, this script will provide you with an array containing item sale predictions. Use it as you will.\n')
-        print('\nWord of warning: this program may fail due to memory constraints if the dataset is too large.')
-        print('As such, we recommend only using a small dateset for future predictions. Its not as if you will use it to predict years in advance.\n')
-        print('\nFor clarification:')
-        print('\nInput: contains calendar sales and prices shops etc. for n days')
-        print('\nOutput: predicts item sales for n days\n')
-        directory = input('\nPlease provide the path to the directory containing calendar.csv, sales_train_evaluation.csv, sell_prices.csv')
-        print(create_predictions(directory))
-    
+if __name__ == "__main__":
+    print('This script doesnt make too much sense. The entire premise is to deploy a very specific competition submission.')
+    print('Nevertheless, this script will provide you with an array containing item sale predictions. Use it as you will.\n')
+    print('\nWord of warning: this program may fail due to memory constraints if the dataset is too large.')
+    print('As such, we recommend only using a small dateset for future predictions. \nIts not as if you will use it to predict years in advance.\n')
+    print('\nFor clarification:')
+    print('\nInput: contains calendar sales and prices shops, etc. for n days')
+    print('\nOutput: predicts item sales for n days\n')
+    directory = input('\nPlease provide the path to the directory containing calendar.csv, sales_train_evaluation.csv, sell_prices.csv:\n')
+    print(create_predictions(directory))
