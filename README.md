@@ -7,7 +7,7 @@ https://www.kaggle.com/c/m5-forecasting-accuracy/
 The competition involves time series forecasting of item sales in specific Wallmart shops. For more information consult the official competition site.
 
 The prediction model uses LightGBM optimized with lags and rolling features.
-Due to the amount of information provided, building the model from manually will likely involve tons of memory usage.
+Due to the amount of information provided, building the model manually will likely involve tons of memory usage.
 At 32GB of RAM I still found myself running into memory constraints every so often. A save feature is implemented before creating lags/rolling means for this reason.
 Use it to circumvent any memory issues.
 
@@ -49,6 +49,8 @@ wm_yr_wk: The id of the week.
 sell_price: The price of the product for the given week/store. The price is provided per week (average across seven days). If not available, this means that the product was not sold during the examined week. Note that although prices are constant at weekly basis, they may change through time (both training and test set).
 
 
+
+
 Training data can be obtained via the competition website. Modeling assumes they will be located in the 'input' directory.
 
 ## Usage
@@ -56,4 +58,4 @@ Training data can be obtained via the competition website. Modeling assumes they
 Import 'predict_item_sales_lgbm' from predict.py and pass the directory of said files as an argument.
 Alternatively run it as a standalone program, though for what reason I do not know.
 
-The function returns an array of item sale predictions. Probably should change this to a better format in the future.
+The function returns an array of item sale predictions. Probably should change this to a proper submission format in the future.
