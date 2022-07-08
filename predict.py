@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from downcast import reduce
 
-def create_predictions(directory):
+def predict_item_sales_lgbm(directory):
     calendar = pd.read_csv(f'{directory}/calendar.csv')
     sales = pd.read_csv(f'{directory}/sales_train_evaluation.csv')
     sell_prices = pd.read_csv(f'{directory}/sell_prices.csv')
@@ -55,4 +55,4 @@ if __name__ == "__main__":
     print('\nInput: contains calendar sales and prices shops, etc. for n days')
     print('\nOutput: predicts item sales for n days\n')
     directory = input('\nPlease provide the path to the directory containing calendar.csv, sales_train_evaluation.csv, sell_prices.csv:\n')
-    print(create_predictions(directory))
+    print(predict_item_sales_lgbm(directory))
