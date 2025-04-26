@@ -59,3 +59,7 @@ Import 'predict_item_sales_lgbm' from predict.py and pass the directory of said 
 Alternatively run it as a standalone program, though for what reason I do not know.
 
 The function returns an array of item sale predictions. Probably should change this to a proper submission format in the future.
+
+
+### Current status
+Mostly still abandoned, but will be revisting EDA to try different time series breakdowns.
